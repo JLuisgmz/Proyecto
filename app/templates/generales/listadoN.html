@@ -1,0 +1,47 @@
+{%extends 'generales/index.html'%}
+{%load static%}
+
+{%block content%}
+
+<!DOCTYPE html>
+<html lang="en">
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+
+    <h6 class="section-subtitle text-center">Servicios</h6>
+    <h3 class="section-title mb-6 text-center">USUARIOS NORMALES</h3>
+
+    <!-- Menu Section -->
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th> No. </th>
+                    <th> Nombre </th>
+                    <th> apellido </th>
+                    <th> dpi </th>
+                    <th> telefono </th>
+                    <th> email </th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for usuario in usuarios %}
+                    <tr>
+                        <td>{{forloop.counter}} </td>
+                        <td>{{usuario.nombre}} </td>
+                        <td>{{usuario.apellido}} </td>
+                        <td>{{usuario.dpi}} </td>
+                        <td>{{usuario.telefono}} </td>
+                        <td>{{usuario.correo_electronico}} </td>
+                        <td><a href="{% url 'eliminar'%}" class="btn btn-primary mt-4">Eliminar</a></td>
+                        <td><a href="{% url 'eliminar'%}" class="btn btn-primary mt-4">Editar</a></td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+            
+
+    <!-- End of Menu Section -->
+
+</body>
+</html>
+
+{%endblock content%}

@@ -1,0 +1,20 @@
+{% extends 'generales/index.html' %}
+{% load static %}
+
+
+{% block content %}
+
+
+<section class="camara">
+    <video autoplay="true" id="video-element"></video>
+</section>
+
+
+<div id="img-element"></div>
+
+<div class="mt-3">
+    <button class="btn btn-primary" id="capture-btn">Tomar foto</button>
+    <button class="btn btn-info" id="capture-btn">reload</button>
+</div>
+
+{%endblock content%}

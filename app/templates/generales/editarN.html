@@ -1,0 +1,25 @@
+{%extends 'generales/index.html'%}
+{%load static%}
+
+{%block content%}
+
+<!DOCTYPE html>
+<html lang="en">
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+
+
+    <!-- Menu Section -->
+    <section id="servicios" class="has-img-bg center">
+        <h1>Editar Usuario</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Guardar Cambios</button>
+        </form>
+    </section>
+    <!-- End of Menu Section -->
+
+</body>
+</html>
+
+{%endblock content%}

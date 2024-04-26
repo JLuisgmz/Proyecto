@@ -1,0 +1,15 @@
+
+{%extends 'generales/index.html'%}
+{%load static%}
+
+{% block content%}
+
+ingresado como: {{request.user.username}}
+
+<br><br>
+
+<a href="{% url 'logout_view' %}" class="bin btn-danger">Logout</a>
+
+
+
+{%endblock content%}

@@ -1,0 +1,199 @@
+{% extends 'generales/index.html'%}
+{%load static%}
+{%block content%}
+<!DOCTYPE html>
+<html lang="en">
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+
+    <!-- Page Header -->
+    <header class="header">
+        <div class="overlay">
+            <img src="{%static 'imgs/USAC.png'%}" alt="logo" class="logo">
+            <h1 class="subtitle">Proyectos</h1>
+            <h1 class="title">Reconocimiento de señales</h1> 
+            <a class="btn btn-primary mt-3" href="{%url 'store'%}">Iniciar</a> 
+        </div>      
+    </header>
+    <!-- End Of Page Header --> 
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            
+            <div class="section-devider my-6 transparent"></div>
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h6 class="section-subtitle">Historia</h6>
+                    <h3 class="section-title">Señales de transito en Guatemala</h3>
+                    <p>
+                        Las señales de tránsito o tráfico son imágenes puestas en carteles en la vía pública, 
+                        cuyos símbolos tienen un significado especial. Estas tienen diferentes colores y formas. 
+                        El significado de cada una de estas es alertar al peatón o conductor a tomar precauciones 
+                        o a alertar a este sobre las situaciones que se dan en la vía pública.
+                        Quizá muchos dirán que las conocen o que no es necesario recordarlo, pero pueden salvar 
+                        vidas y en Guatemala se hace sumamente necesario que se respeten, sobre todo después de los 
+                        últimos acontecimientos en carreteras y vías públicas.
+                    </p>
+                </div>
+                <div class="col-md-6 order-1 order-sm-first">
+                    <div class="row">
+                        <div class="col">
+                            <img alt="#" src="{%static 'imgs/señales1.jpg'%}" class="w-100 rounded shadow">
+                        </div>
+                        <div class="col">
+                            <img alt="#" src="{%static 'imgs/señales2.jpg'%}" class="w-100 rounded shadow">
+                        </div>
+                    </div>                  
+                </div>
+            </div>
+            <div class="row align-items-center">                
+                <div class="col-md-6">
+                    <h6 class="section-subtitle">Señales</h6>
+                    <h3 class="section-title">Tipos de señales</h3>
+                    <p class="mb-1 font-weight-bold">Señales de tránsito informativas:<span class="font-weight-normal pl-2 text-muted">Informan sobre servicios y similares, suelen ser de color azul con forma rectangular, mientras que las que señalan direcciones, calles, avenidas u otras son de color verde y las que indican sentidos y afines son de color blanco.</span></p>
+                    <p class="mb-1 font-weight-bold">Señales de tránsito preventivas<span class="font-weight-normal pl-2 text-muted">Indican precaución y el motivo de la misma. Se presentan de fondo amarillo y en forma de rombo, aunque en casos particulares pueden ser rectangulares y de fondo blanco.</span></p>
+                    <p class="mb-1 font-weight-bold">Señales de tránsito reglamentarias<span class="font-weight-normal pl-2 text-muted">forma circular, con borde rojo y fondo blanco</span></p>
+                    <p class="mb-1 font-weight-bold">Señales de tránsito transitorias<span class="font-weight-normal pl-2 text-muted">reparaciones, cierres de calles temporales, obreros en la vía y otros similares.</span></p>
+
+                    <a href="#book-table" class="btn btn-primary btn-sm w-md mt-4">Book a table</a>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col">
+                            <img alt="#" src="{%static 'imgs/señales3.jpg'%}" class="w-100 rounded shadow">
+                        </div>
+                    </div>                  
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End OF About Section -->
+
+    <!-- Menu Section -->
+    <section id="servicios" class="has-img-bg">
+        <div class="container">
+            <h6 class="section-subtitle text-center">Servicios</h6>
+            <h3 class="section-title mb-6 text-center">Reconocimiento de Señales</h3>
+            <div class="card bg-transparent">
+                <div class="card-body px-4 pb-4 text-center">                   
+                    <div class="row text-left">
+                    
+                        <div class="col-md-6 my-4">
+                            <a href="#" class="pb-3 mx-3 d-block text-light text-decoration-none border border-left-0 border-top-0 border-right-0">
+                                <div class="d-flex">
+                                    <div class="flex-grow-1">
+                                        NUEVA BÚSQUEDA
+                                        <p class="mt-2 mb-0">Carga la imagen que deseas analizar</p>
+                                    </div>
+                                    <h6 class="float-right text-primary">*</h6>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-6 my-4">
+                            <a href="#" class="pb-3 mx-3 d-block text-light text-decoration-none border border-left-0 border-top-0 border-right-0">
+                                <div class="d-flex">
+                                    <div class="flex-grow-1">
+                                        HISTORIAL
+                                        <p class="mt-2 mb-0">Revisa tus busquedas recientes</p>
+                                    </div>
+                                    <h6 class="float-right text-primary">*</h6>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center mt-4">
+                        <a href="{% url 'store'%}" class="btn btn-primary mt-4">Sign In</a>
+                    </div>
+                    <div class="row justify-content-center mt-4">
+                        <div class="col-md-6">
+                            <div class="dropdown">
+                                <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Sign Up
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="{%url 'registern'%}">Normal User</a>
+                                    <a class="dropdown-item" href="{%url 'registere'%}">Special User</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>                  
+        </div>
+    </section>
+    
+    <!-- End of Menu Section -->
+
+    <!-- Team Section -->
+    <section id="team">
+        <div class="container">
+            <h6 class="section-subtitle text-center">Nuestro Equipo</h6>
+            <h3 class="section-title mb-5 text-center">Desarrolladores</h3>
+            <div class="row">
+                <div class="col-md-4 my-3">
+                    <div class="team-wrapper text-center">
+                        <img src="{%static 'imgs/foto1.jpg'%}" class="circle-120 rounded-circle mb-3 shadow" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, Pigga Landing page">
+                        <h5 class="my-3">JLuis Gómez</h5>
+                        <p>202112877</p>
+                        <h6 class="socials mt-3">
+                            <a href="javascript:void(0)" class="px-2"><i class="ti-facebook"></i></a>
+                            <a href="javascript:void(0)" class="px-2"><i class="ti-twitter"></i></a>
+                            <a href="javascript:void(0)" class="px-2"><i class="ti-instagram"></i></a>
+                            <a href="javascript:void(0)" class="px-2"><i class="ti-google"></i></a>
+                        </h6>
+                    </div>
+                </div>
+                <div class="col-md-4 my-3">
+                    
+                </div>
+                <div class="col-md-4 my-3">
+                    <div class="team-wrapper text-center">
+                        <img src="assets/imgs/chef-3.jpg" class="circle-120 rounded-circle mb-3 shadow" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, Pigga Landing page">
+                        <h5 class="my-3">Patrick Valdez</h5>
+                        <p>201517002</p>
+                        <h6 class="socials mt-3">
+                            <a href="javascript:void(0)" class="px-2"><i class="ti-facebook"></i></a>
+                            <a href="javascript:void(0)" class="px-2"><i class="ti-twitter"></i></a>
+                            <a href="javascript:void(0)" class="px-2"><i class="ti-instagram"></i></a>
+                            <a href="javascript:void(0)" class="px-2"><i class="ti-google"></i></a>
+                        </h6>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </section>
+    <!-- End of Team Section -->
+
+
+    <!-- Book Table Section -->
+    <section id="book-table" class="bg-white">
+        <div class="container">
+            <h6 class="section-subtitle text-center">Buzon</h6>
+            <h3 class="section-title mb-5 text-center">DEJANOS TUS COMENTARIOS</h3>
+            <div class="row align-items-center">
+                <div class="col-md-6 d-none d-md-block">
+                    <img src="{% static 'imgs/comentarios.png'%}" alt="#" class="sobre">
+                </div>
+                <div class="col-md-6">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Your Name">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="email" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="seats" placeholder="Comments">
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Enviar</button>
+                        <small class="form-text text-muted mt-3">We don't span customers. Check our <a href="#">Privacy Policy</a></small>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End OF Book Table Section -->
+
+</body>
+</html>
+{%endblock content%}
